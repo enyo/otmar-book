@@ -1,4 +1,4 @@
-otmar-book
+Otmar book
 ==========
 
-Project for a friend
+Project for a friend. Move on – Nothing to see.
