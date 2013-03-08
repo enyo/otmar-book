@@ -1,0 +1,8 @@
+body{background:#f8f8f8;padding:30px 0}
+#entries .entry{padding:15px 20px;margin:10px 0;border:1px solid transparent;-webkit-border-radius:2px;border-radius:2px;background:#fff;border:1px solid #eee;}
+#entries .entry:hover{-webkit-box-shadow:1px 1px 0 #eee;box-shadow:1px 1px 0 #eee}
+#entries .entry .row{clear:both;zoom:1;position:relative;}
+#entries .entry .row:before,#entries .entry .row:after{content:"";display:table}
+#entries .entry .row:after{clear:both}
+#entries .entry .row label{cursor:inherit;float:left;width:120px;text-align:right;padding-right:10px;margin:0}
+#entries .entry .row span{display:block;position:relative;margin-left:130px;padding-left:10px;border-left:1px solid #ccc}

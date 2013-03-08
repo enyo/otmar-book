@@ -10,6 +10,7 @@
     "jade": "*",
     "stylus": "*",
     "coffee-script": "*",
+    "nib": "*",
     "mongo-rest": "*"
   }
 }

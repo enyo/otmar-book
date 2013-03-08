@@ -1,1 +1,38 @@
+@import "nib"
 
+
+body 
+  background #f8f8f8
+  padding 30px 0
+
+#entries
+
+  .entry
+    padding 15px 20px
+    margin 10px 0
+    border 1px solid transparent
+    border-radius 2px
+    background white
+    border 1px solid #eee
+    &:hover
+      box-shadow 1px 1px 0 #eee
+
+    .row
+      clear both
+      clearfix()
+      position relative
+      $left-column-width = 120px
+      $left-column-padding = 10px
+      label
+        cursor inherit
+        float left
+        width $left-column-width
+        text-align right
+        padding-right $left-column-padding
+        margin 0
+      span
+        display block
+        position relative
+        margin-left ($left-column-width + ($left-column-padding))
+        padding-left $left-column-padding
+        border-left 1px solid #ccc

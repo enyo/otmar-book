@@ -3,6 +3,8 @@
 Module dependencies.
 ###
 express = require "express"
+stylus = require "stylus"
+nib = require "nib"
 routes = require "./routes"
 http = require "http"
 path = require "path"
@@ -22,7 +24,18 @@ app.configure ->
   app.use express.bodyParser()
   app.use express.methodOverride()
   app.use app.router
-  app.use require("stylus").middleware(__dirname + "/public")
+
+
+  compile = (str, path) ->
+    stylus(str)
+      .set('filename', path)
+      .set('compress', true)
+      .use(nib())
+
+  app.use stylus.middleware
+    src: __dirname + "/public"
+    compile: compile
+
   app.use express.static(path.join(__dirname, "public"))
 
 app.configure "development", ->
