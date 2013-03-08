@@ -1,5 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+
+
+  script(type="text/x-handlebars", data-template-name="application")
+    include templates/application.handlebars
+
+  script(type="text/x-handlebars", data-template-name="entries")
+    {{outlet}}
+  script(type="text/x-handlebars", data-template-name="entries/index")
+    include templates/entries/index.handlebars
+  script(type="text/x-handlebars", data-template-name="entries/entry")
+    include templates/entries/entry.handlebars
+
+  #main

@@ -1,7 +1,17 @@
 doctype 5
 html
   head
-    title= title
+    title Otmar
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+    script(src="/javascripts/jquery-1.9.1.min.js")
+    script(src="/javascripts/handlebars.js")
+    script(src="/javascripts/ember.js")
+    script(src="/javascripts/ember-data.js")
+    script(src="/javascripts/bootstrap.js")
+    script(src="/javascripts/app.js")
   body
-    block content
+
+    .container
+      block content

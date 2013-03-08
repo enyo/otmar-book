@@ -9,6 +9,7 @@
     "express": "3.x",
     "jade": "*",
     "stylus": "*",
-    "coffee-script": "*"
+    "coffee-script": "*",
+    "mongo-rest": "*"
   }
 }
