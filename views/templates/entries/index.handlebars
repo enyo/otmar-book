@@ -1,44 +1,46 @@
 
 <div id="entries">
 {{#each content}}
-  <section class="entry" {{bindAttr class="finished"}}>
-    <div class="row">
-      <label>Archiv Nr.</label>
-      <span>{{archiveNumber}}</span>
-    </div>
-    <div class="row">
-      <label>Titel</label>
-      <span>{{title}}</span>
-    </div>
-    <div class="row">
-      <label>Termin</label>
-      <span>{{date}}</span>
-    </div>
-    <div class="row">
-      <label>Veröffentlicht</label>
-      <span>{{published}}</span>
-    </div>
-    <div class="row">
-      <label>Archivinhalt</label>
-      <span>{{archiveContent}}</span>
-    </div>
-    <div class="row">
-      <label>Seitenangabe</label>
-      <span>{{pageReference}}</span>
-    </div>
-    <div class="row">
-      <label>Obsessionen</label>
-      <span>{{obsessions}}</span>
-    </div>
-    <hr />
-    <div class="row">
-      <label>Arbeitsbuch</label>
-      <span>{{workbook}}</span>
-    </div>
-    <div class="row">
-      <label>Arbeitsheft</label>
-      <span>{{workbooklet}}</span>
-    </div>
-  </section>
+  {{#view App.EntryView}}
+    <section class="entry" {{bindAttr class="finished"}}>
+      <div class="row">
+        <label>Archiv Nr.</label>
+        <span>{{archiveNumber}}</span>
+      </div>
+      <div class="row">
+        <label>Titel</label>
+        <span>{{title}}</span>
+      </div>
+      <div class="row">
+        <label>Termin</label>
+        <span>{{date}}</span>
+      </div>
+      <div class="row">
+        <label>Veröffentlicht</label>
+        <span>{{published}}</span>
+      </div>
+      <div class="row">
+        <label>Archivinhalt</label>
+        <span>{{archiveContent}}</span>
+      </div>
+      <div class="row">
+        <label>Seitenangabe</label>
+        <span>{{pageReference}}</span>
+      </div>
+      <div class="row">
+        <label>Obsessionen</label>
+        <span>{{obsessions}}</span>
+      </div>
+      <hr />
+      <div class="row">
+        <label>Arbeitsbuch</label>
+        <span>{{workbook}}</span>
+      </div>
+      <div class="row">
+        <label>Arbeitsheft</label>
+        <span>{{workbooklet}}</span>
+      </div>
+    </section>
+  {{/view}}
 {{/each}}
 </div>

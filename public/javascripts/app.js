@@ -101,4 +101,12 @@
     }
   });
 
+  App.EntryView = Ember.View.extend({
+    click: function() {
+      return console.log("click");
+    }
+  });
+
+  App.EntryController = Ember.ObjectController.extend();
+
 }).call(this);

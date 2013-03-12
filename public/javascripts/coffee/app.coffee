@@ -119,4 +119,6 @@ App.EntriesIndexRoute = Ember.Route.extend
     App.Entry.all()
 
 
-
+App.EntryView = Ember.View.extend
+  click: -> console.log "click"
+App.EntryController = Ember.ObjectController.extend()
