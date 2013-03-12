@@ -57,6 +57,8 @@
   attr = DS.attr;
 
   App.Entry = DS.Model.extend({
+    editing: false,
+    test: "bla",
     finished: attr("boolean"),
     archiveNumber: attr("string"),
     oldMedium: attr("string"),
@@ -98,15 +100,16 @@
       window.test = this;
       App.Entry.find();
       return App.Entry.all();
+    },
+    events: {
+      editEntry: function(entry) {
+        return entry.set("editing", true);
+      },
+      saveEntry: function(entry) {
+        entry.set("editing", false);
+        return alert("Änderungen werden noch nicht wirklich gespeichert!");
+      }
     }
   });
-
-  App.EntryView = Ember.View.extend({
-    click: function() {
-      return console.log("click");
-    }
-  });
-
-  App.EntryController = Ember.ObjectController.extend();
 
 }).call(this);

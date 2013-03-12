@@ -51,6 +51,10 @@ attr = DS.attr
 
 App.Entry = DS.Model.extend
 
+  editing: no
+  test: "bla"
+
+
   finished: attr "boolean"
 
   # - Archiv Nr
@@ -117,8 +121,11 @@ App.EntriesIndexRoute = Ember.Route.extend
     window.test = this
     App.Entry.find()
     App.Entry.all()
+  events:
+    editEntry: (entry) ->
+      entry.set "editing", yes
+    saveEntry: (entry) ->
+      entry.set "editing", false
+      alert("Änderungen werden noch nicht wirklich gespeichert!")
 
 
-App.EntryView = Ember.View.extend
-  click: -> console.log "click"
-App.EntryController = Ember.ObjectController.extend()

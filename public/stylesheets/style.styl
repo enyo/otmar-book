@@ -6,6 +6,7 @@ body
   padding 30px 0
 
 #entries
+  color #555
 
   .entry
     padding 15px 20px
@@ -14,25 +15,58 @@ body
     border-radius 2px
     background white
     border 1px solid #eee
+
+    .infos
+      cursor pointer
+
     &:hover
+      border-color #ddd
       box-shadow 1px 1px 0 #eee
 
-    .row
+    &.finished
+      border-color #D6E9C6
+      background #fafffa
+
+    .info-row
       clear both
       clearfix()
       position relative
       $left-column-width = 120px
       $left-column-padding = 10px
+      line-height 240%
+
+      &:nth-child(odd)
+        background rgba(0, 0, 0, 0.02)
+
       label
         cursor inherit
         float left
         width $left-column-width
         text-align right
-        padding-right $left-column-padding
         margin 0
+        line-height @line-height
+        color #000
+        &:after
+          content ": "
       span
         display block
         position relative
         margin-left ($left-column-width + ($left-column-padding))
-        padding-left $left-column-padding
-        border-left 1px solid #ccc
+        line-height @line-height
+        // border-left 1px solid #ccc
+
+
+    .editing
+      border-top 1px solid #aaa
+      margin-top 20px
+      padding-top 30px
+
+      input, textarea
+        width 100%
+        box-sizing border-box
+
+      input
+        height 30px
+      textarea
+        min-height 80px
+
